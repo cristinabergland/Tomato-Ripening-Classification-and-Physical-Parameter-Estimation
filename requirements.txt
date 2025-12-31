@@ -1,0 +1,34 @@
+# =============================================================================
+# REQUIREMENTS - Aplicação Streamlit v3.0 (Tempo Real)
+# Sistema de Classificação de Tomates
+# =============================================================================
+
+# Framework Web
+streamlit>=1.28.0
+
+# Webcam em Tempo Real
+streamlit-webrtc>=0.47.0
+av>=10.0.0
+
+# Processamento de Dados
+pandas>=2.0.0
+numpy>=1.24.0
+
+# Machine Learning
+scikit-learn>=1.3.0
+joblib>=1.3.0
+
+# Processamento de Imagem
+opencv-python>=4.8.0
+Pillow>=10.0.0
+
+# Visualização
+plotly>=5.17.0
+
+# =============================================================================
+# INSTALAÇÃO:
+# pip install -r requirements.txt
+#
+# EXECUÇÃO:
+# streamlit run app_classificacao_tomates_v3_realtime.py
+# =============================================================================
