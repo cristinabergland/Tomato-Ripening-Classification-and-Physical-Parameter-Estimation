@@ -28,7 +28,7 @@ tomato-classification/
 │   ├── scaler_classificacao.pkl
 │   ├── scaler_regressao.pkl
 │   └── label_encoder.pkl
-├── 📁 imagens/                              # Tomato sample images
+├── 📁 imagens_tomatee.zip                   # Tomato sample images
 ├── 🐍 app_foto_3.py                         # Streamlit inference application
 ├── 📓 notebook_dissertacao_PUBLICAVEL.ipynb # Complete analysis notebook
 ├── 📊 oficial_experimento_tomates_2025.xlsx # Laboratory measurements
