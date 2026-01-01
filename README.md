@@ -19,7 +19,6 @@ Computer vision system for **automatic classification** of tomato ripening stage
 ---
 
 ## 📁 Repository Structure
-
 ```
 tomato-classification/
 ├── 📁 modelos/                              # Trained ML models (.pkl)
@@ -29,8 +28,11 @@ tomato-classification/
 │   ├── scaler_classificacao.pkl
 │   ├── scaler_regressao.pkl
 │   └── label_encoder.pkl
+├── 📁 imagens/                              # Tomato sample images
 ├── 🐍 app_foto_3.py                         # Streamlit inference application
 ├── 📓 notebook_dissertacao_PUBLICAVEL.ipynb # Complete analysis notebook
+├── 📊 oficial_experimento_tomates_2025.xlsx # Laboratory measurements
+├── 📊 dataset_features_imagens.csv          # Extracted image features (66 samples)
 ├── 📄 README.md
 ├── 📄 requirements.txt
 └── 📄 LICENSE
@@ -47,7 +49,6 @@ tomato-classification/
 ## 🚀 Installation
 
 ### Local Setup
-
 ```bash
 # Clone repository
 git clone https://github.com/YOUR_USERNAME/tomato-classification.git
@@ -134,7 +135,6 @@ The `notebook_dissertacao_PUBLICAVEL.ipynb` contains:
 ---
 
 ## 📝 Citation
-
 ```bibtex
 @mastersthesis{author2025tomato,
   title  = {Characterization of Tomatoes by RGB Images and Machine Learning},
