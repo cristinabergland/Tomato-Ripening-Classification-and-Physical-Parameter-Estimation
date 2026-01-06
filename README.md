@@ -1,38 +1,38 @@
-# 🍅 Tomato Ripening Classification and Physical Parameter Estimation
+# 🍅 Classificação de Maturação de Tomates e Estimativa de Parâmetros Físicos
 
-> **Computer Vision System with Machine Learning for Non-Destructive Tomato Quality Assessment**
+> **Sistema de Visão Computacional com Aprendizado de Máquina para Avaliação Não-Destrutiva de Qualidade de Tomates**
 
 [![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://www.python.org/)
 [![Scikit-learn](https://img.shields.io/badge/Scikit--learn-1.3+-orange.svg)](https://scikit-learn.org/)
 [![Streamlit](https://img.shields.io/badge/Streamlit-1.28+-red.svg)](https://streamlit.io/)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
-[![INPI](https://img.shields.io/badge/INPI-Registration%20Pending-yellow.svg)](#-software-registration)
+[![INPI](https://img.shields.io/badge/INPI-Registro%20em%20Andamento-yellow.svg)](#-registro-de-software)
 
 ---
 
-## 🎯 Overview
+## 🎯 Visão Geral
 
-Computer vision system for **automatic classification** of tomato ripening stages (Green, Orange, Red) and **estimation of physical parameters** (mass, volume) using RGB images and classical ML.
+Sistema de visão computacional para **classificação automática** dos estádios de maturação de tomates (Verde, Alaranjado, Vermelho) e **estimativa de parâmetros físicos** (massa, volume) utilizando imagens RGB e aprendizado de máquina clássico.
 
-**Key Results**: Random Forest achieved **97.14% accuracy** | Lasso R² = **0.72** for mass estimation
+**Principais Resultados**: Random Forest alcançou **97,14% de acurácia** | Lasso R² = **0,72** para estimativa de massa
 
 ---
 
-## 📁 Repository Structure
+## 📁 Estrutura do Repositório
 ```
 tomato-classification/
-├── 📁 modelos/                              # Trained ML models (.pkl)
+├── 📁 modelos/                              # Modelos ML treinados (.pkl)
 │   ├── modelo_classificacao_rf.pkl
 │   ├── modelo_regressao_peso.pkl
 │   ├── modelo_regressao_volume.pkl
 │   ├── scaler_classificacao.pkl
 │   ├── scaler_regressao.pkl
 │   └── label_encoder.pkl
-├── 📁 imagens_tomatee.zip                   # Tomato sample images
-├── 🐍 app_foto_3.py                         # Streamlit inference application
-├── 📓 notebook_dissertacao_PUBLICAVEL.ipynb # Complete analysis notebook
-├── 📊 oficial_experimento_tomates_2025.xlsx # Laboratory measurements
-├── 📊 dataset_features_imagens.csv          # Extracted image features (66 samples)
+├── 📁 imagens_tomate.zip                    # Imagens das amostras de tomate
+├── 🐍 app_foto_3.py                         # Aplicação Streamlit para inferência
+├── 📓 notebook_dissertacao_PUBLICAVEL.ipynb # Notebook completo de análise
+├── 📊 oficial_experimento_tomates_2025.xlsx # Medições laboratoriais
+├── 📊 dataset_features_imagens.csv          # Features extraídas das imagens (66 amostras)
 ├── 📄 README.md
 ├── 📄 requirements.txt
 └── 📄 LICENSE
@@ -40,117 +40,117 @@ tomato-classification/
 
 ---
 
-## 📜 Software Registration
+## 📜 Registro de Software
 
-⚠️ **This software is under registration process at INPI (National Institute of Industrial Property - Brazil).**
+⚠️ **Este software está em processo de registro junto ao INPI (Instituto Nacional da Propriedade Industrial).**
 
 ---
 
-## 🚀 Installation
+## 🚀 Instalação
 
-### Local Setup
+### Instalação Local
 ```bash
-# Clone repository
-git clone https://github.com/YOUR_USERNAME/tomato-classification.git
+# Clonar repositório
+git clone https://github.com/SEU_USUARIO/tomato-classification.git
 cd tomato-classification
 
-# Install dependencies
+# Instalar dependências
 pip install -r requirements.txt
 
-# Run Streamlit app
+# Executar aplicação Streamlit
 streamlit run app_foto_3.py
-# Access: http://localhost:8501
+# Acesse: http://localhost:8501
 ```
 
 ### Google Colab
 
-Open `notebook_dissertacao_PUBLICAVEL.ipynb` directly in Colab - no local installation required.
+Abra `notebook_dissertacao_PUBLICAVEL.ipynb` diretamente no Colab - sem necessidade de instalação local.
 
 ---
 
-## 💻 Usage
+## 💻 Uso
 
-### Streamlit App Features
+### Funcionalidades da Aplicação Streamlit
 
-- 📸 **Upload Tab**: Analyze images from file
-- 🎥 **Webcam Tab**: Real-time capture and analysis
-- ⚙️ **Sidebar**: Adjust pixels/cm scale
+- 📸 **Aba Upload**: Analise imagens de arquivo
+- 🎥 **Aba Webcam**: Captura e análise em tempo real
+- ⚙️ **Barra Lateral**: Ajuste de escala pixels/cm
 
 ### Jupyter Notebook
 
-The `notebook_dissertacao_PUBLICAVEL.ipynb` contains:
-- Statistical analysis (ANOVA, Tukey HSD)
-- Feature extraction pipeline
-- Model training and evaluation
-- Results visualization
+O `notebook_dissertacao_PUBLICAVEL.ipynb` contém:
+- Análise estatística (ANOVA, Tukey HSD)
+- Pipeline de extração de features
+- Treinamento e avaliação de modelos
+- Visualização de resultados
 
 ---
 
-## 🔬 Methodology
+## 🔬 Metodologia
 
-### Feature Extraction (22 features)
+### Extração de Features (22 características)
 
-| Category | Features |
-|----------|----------|
-| **Color (RGB)** | R/G/B_mean, R/G/B_ratio, RG_ratio, RG_diff_norm |
-| **Color (HSV)** | H_mean, S_mean, V_mean |
-| **Color (CIELAB)** | L*, a*, b* |
-| **Texture (GLCM)** | Contrast, Homogeneity, Energy, Correlation |
-| **Geometric** | Area, Perimeter, Equivalent Diameter, Circularity |
+| Categoria | Features |
+|-----------|----------|
+| **Cor (RGB)** | R/G/B_mean, R/G/B_ratio, RG_ratio, RG_diff_norm |
+| **Cor (HSV)** | H_mean, S_mean, V_mean |
+| **Cor (CIELAB)** | L*, a*, b* |
+| **Textura (GLCM)** | Contraste, Homogeneidade, Energia, Correlação |
+| **Geométricas** | Área, Perímetro, Diâmetro Equivalente, Circularidade |
 
-### Models
+### Modelos
 
-- **Classification**: Random Forest, SVM (RBF), KNN (k=5)
-- **Regression**: Lasso, Ridge (geometric features only)
-- **Validation**: Stratified k-fold (k=10)
-
----
-
-## 📊 Results
-
-### Classification (k=10 cross-validation)
-
-| Model | Accuracy | F1-Score |
-|-------|----------|----------|
-| **Random Forest** | **97.14%** | 0.9696 |
-| SVM (RBF) | 96.90% | 0.9696 |
-| KNN (k=5) | 95.48% | 0.9545 |
-
-### Regression
-
-| Target | Model | R² |
-|--------|-------|-----|
-| Mass | Lasso | 0.7229 |
-| Volume | Ridge | 0.6455 |
+- **Classificação**: Random Forest, SVM (RBF), KNN (k=5)
+- **Regressão**: Lasso, Ridge (apenas features geométricas)
+- **Validação**: k-fold estratificado (k=10)
 
 ---
 
-## 📚 References
+## 📊 Resultados
 
-1. **Bello et al.** (2020). Digital image analysis for tomato quality assessment.
-2. **Phan et al.** (2023). YOLOv5-based CNN for tomato classification.
-3. **Costa et al.** (2025). Embedded computer vision for tomatoes.
-4. **Giovannoni, J.** (2004). Genetic regulation of fruit ripening.
+### Classificação (validação cruzada k=10)
+
+| Modelo | Acurácia | F1-Score |
+|--------|----------|----------|
+| **Random Forest** | **97,14%** | 0,9696 |
+| SVM (RBF) | 96,90% | 0,9696 |
+| KNN (k=5) | 95,48% | 0,9545 |
+
+### Regressão
+
+| Alvo | Modelo | R² |
+|------|--------|-----|
+| Massa | Lasso | 0,7229 |
+| Volume | Ridge | 0,6455 |
 
 ---
 
-## 📝 Citation
+## 📚 Referências
+
+1. **Bello et al.** (2020). Análise digital de imagens para avaliação de qualidade de tomates.
+2. **Phan et al.** (2023). CNN baseada em YOLOv5 para classificação de tomates.
+3. **Costa et al.** (2025). Visão computacional embarcada para tomates.
+4. **Giovannoni, J.** (2004). Regulação genética do amadurecimento de frutos.
+
+---
+
+## 📝 Citação
 ```bibtex
-@mastersthesis{author2025tomato,
-  title  = {Characterization of Tomatoes by RGB Images and Machine Learning},
-  school = {Graduate Program in Agrifood Technology (PPGTA)},
+@mastersthesis{autor2025tomate,
+  title  = {Caracterização de Tomates por Imagens RGB e Aprendizado de Máquina},
+  school = {Programa de Pós-Graduação em Tecnologia de Alimentos (PPGTA)},
   year   = {2025}
 }
 ```
 
 ---
 
-## 📄 License
+## 📄 Licença
 
-MIT License - See [LICENSE](LICENSE) file.
+Licença MIT - Veja o arquivo [LICENSE](LICENSE).
 
 ---
 
 <p align="center">
-  <b>PPGTA</b> • Master's Dissertation • 2025
+  <b>PPGTA</b> • Dissertação de Mestrado • 2025
 </p>
